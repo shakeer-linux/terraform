@@ -750,8 +750,8 @@ I am storing the testate file in already created s3 bucket “tf-s3-bucket-shake
 $ cat provider.tf
 provider "aws" {
   region     = "us-east-2"
-  access_key = "AKIAVA3BQ4IXJVJBGJQ2"
-  secret_key = "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"
+  access_key = "xxx"
+  secret_key = "xxx"
 }
 $ cat instnace.tf
 resource "aws_instance" "inst3" {
@@ -765,8 +765,8 @@ terraform {
     bucket = "tf-s3-bucket-shakeer"
     key    = "terraformdemo.tfstate"
     region = "us-east-2"
-    access_key = "AKIAVA3BQ4IXJVJBGJQ2"
-    secret_key = "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"
+    access_key = "xxx"
+    secret_key = "xxx"
   }
 }
 $
