@@ -1,7 +1,9 @@
+
+
+### Terraform Basics
+
+
 ```
-
-Terraform Basics
-
 
 
 Terraform Commands:
@@ -181,7 +183,8 @@ Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
 Outputs:
 
 present-time = Monday, 02-Nov-20 15:36:59 UTC
-PRINHYLTPAP1074:aws-terraform shakeerp$
+
+$
 Data Source:
 Data Source is like it will fetch the data for use elsewhere in Terraform configuration.
 For example : you need a ami id information for aws instance. It will change according to region. You want to fetch the ami id what ever the region. You can get ami id information using data sources.
@@ -211,7 +214,8 @@ export TF_LOG = TRACE  — > it will show you most verbose details.
 Other are :  TRACE, WARN, INFO, DEBUG, ERROR are supported fields for the TF_LOG env variable.
 Eg:
 $ export TF_LOG=TRACE
-PRINHYLTPAP1074:aws-terraform shakeerp$ terraform plan
+
+$ terraform plan
 2020/11/03 14:56:12 [INFO] Terraform version: 0.13.5
 2020/11/03 14:56:12 [INFO] Go runtime version: go1.14.7
 2020/11/03 14:56:12 [INFO] CLI args: []string{"/usr/local/bin/terraform", "plan"}
@@ -433,9 +437,9 @@ resource "aws_instance" "module_instance" {
   ami           = "ami-03657b56516ab7912"
   instance_type = var.inst_type
 }
+$
 
-PRINHYLTPAP1074:ec2 shakeerp$
-PRINHYLTPAP1074:ec2 shakeerp$ cat variables.tf
+$ cat variables.tf
 variable "inst_type" {
   default = "t2.micro"
 }
@@ -450,14 +454,14 @@ provider "aws" {
 }
 $
 
-PRINHYLTPAP1074:project-A shakeerp$ cat module-local.tf
+$ cat module-local.tf
 module "module_instance2" {
    source = "../modules/ec2/"
 }
 $
 
 
-PRINHYLTPAP1074:aws-terraform shakeerp$ tree -a module-demo/
+$ tree -a module-demo/
 module-demo/
 ├── .terraform
 │   └── modules
@@ -522,8 +526,7 @@ module "ec2_cluster" {
 }
 $
 
-
-PRINHYLTPAP1074:aws-terraform shakeerp$ tree -a registry-module
+$ tree -a registry-module
 registry-module
 ├── .terraform
 │   ├── modules
