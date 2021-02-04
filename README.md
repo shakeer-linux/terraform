@@ -382,7 +382,8 @@ Eg: you can get the attributes values(ip details) of the instance and you can st
 
 $ cat provisioner-
 provisioner-local-exec.tf   provisioner-remote-exec.tf
-PRINHYLTPAP1074:aws-terraform shakeerp$ cat provisioner-local-exec.tf
+
+$ cat provisioner-local-exec.tf
 resource "aws_instance" "inst4" {
   #                  Ubuntu 16 aim id
   ami           = "ami-0f884a43c583aa2fb"
